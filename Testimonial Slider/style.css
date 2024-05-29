@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+
+body {
+	font-family: Poppins;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 100px;
+}
+
+p {
+	margin: 4px 0 !important;
+
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none !important;
+	/* color: #313B3D !important; */
+}
+
+ol,
+ul {
+	padding-left: 0 !important;
+}
+
+section {
+	padding-top: 80px;
+}
+
+.fa,
+.fas {
+	font-weight: 900;
+	color: #8D1CBA !important;
+}
+
+.fa-3x {
+	font-size: 2em !important;
+	color: white !important;
+}
+
+h2 {
+	color: #474747;
+}
+
+/*===================
+	Why choose CSS
+=====================*/
+.why-choose .choose-left .list {}
+
+.why-choose .choose-left .list li {
+	color: #868686;
+	margin-bottom: 12px;
+}
+
+.why-choose .choose-left .list li:last-child {
+	margin-bottom: 0px;
+}
+
+.why-choose .choose-left .list li i {
+	height: 15px;
+	width: 15px;
+	line-height: 15px;
+	text-align: center;
+	background: #ffffff;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 100%;
+	padding-left: 2px;
+	margin-right: 16px;
+	font-size: 20px;
+}
+
+.thumbnail.hover-to-play .play-icon {
+	display: none;
+}
+
+.thumbnail.hover-to-play:hover .play-icon {
+	display: block;
+}
+
+.thumbnail {
+	position: relative;
+}
+
+.thumbnail .play-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.thumbnail .play-icon i {
+	font-size: 3rem;
+	color: white;
+	opacity: 0.7;
+	transition: opacity 0.3s;
+}
+
+.thumbnail .play-icon:hover i {
+	opacity: 1;
+}
+
+.thumbnail .img-fluid {
+	object-fit: cover;
+	border-radius: 16px;
+	width: 100%;
+}
+
+.thumbnail:hover .img-fluid {
+	filter: brightness(50%);
+}
+
+#videoModal .btn-close {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	right: 0;
+	background-color: #8D1CBA;
+	border-radius: 50px;
+	opacity: 1;
+	font-size: 11px;
+	color: white !important;
+}
+
+/*=======================
+	End Why choose CSS
+=========================*/
+
+
+/* Testimonial */
+
+.testimonial-bg {
+	background-color: #fff;
+	border: 1px solid #8D1CBA;
+	padding: 35px 70px;
+	border-radius: 16px;
+	text-align: center;
+	position: relative;
+}
+
+.testimonial {
+	padding: 0 15px;
+}
+
+.testimonial .description {
+	font-size: 18px;
+	font-weight: 400;
+	color: #848484;
+	line-height: 30px;
+	padding-bottom: 25px;
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.testimonial .description:before {
+	content: "";
+	width: 75%;
+	border-top: 1px solid #8D1CBA;
+	margin: 0 auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.testimonial .description:after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	border-bottom: 1px solid #8D1CBA;
+	border-right: 1px solid #8D1CBA;
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.testimonial .pic {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin: 25px auto;
+	overflow: hidden;
+}
+
+.testimonial .pic img {
+	width: 100%;
+	height: auto;
+}
+
+.testimonial .title {
+	display: inline-block;
+	font-size: 24px;
+	font-weight: 700;
+	color: #8D1CBA;
+	margin: 0;
+}
+
+.testimonial .post {
+	display: inline-block;
+	font-size: 20px;
+	color: #848484;
+}
+
+.owl-theme .owl-controls {
+	margin-top: 20px;
+	/* position: absolute;
+	bottom: -20%;
+	right: 0; */
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+	width: 40px;
+	height: 40px;
+line-height: 40px;
+	background: #FFFF;
+	opacity: 1;
+	padding: 0;
+	display: inline-block;
+	margin: 0 10px;
+	border: 1px solid #8D1CBA;
+}
+
+.owl-prev:before,
+.owl-next:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; /* Adjust font weight as needed */
+}
+
+.owl-prev:before {
+    content: "\f104"; /* Unicode for the left arrow icon */
+    color: #8D1CBA;
+    font-size: 20px;
+}
+
+.owl-next:before {
+    content: "\f104"; /* Unicode for the right arrow icon */
+    color: #8D1CBA;
+    font-size: 20px;
+}
+
+
+.owl-next:before {
+	content: "\f105";
+}
+
+@media only screen and (max-width:767px) {
+	.testimonial-bg {
+		padding: 50px 40px;
+	}
+
+	.owl-theme .owl-controls {
+		bottom: -22%;
+	}
+}
+
+@media only screen and (max-width:480px) {
+	.testimonial-bg:before {
+		width: 55px;
+		height: 55px;
+		line-height: 55px;
+		font-size: 40px;
+	}
+
+	.testimonial-bg {
+		padding: 30px 10px;
+	}
+
+	.owl-theme .owl-controls {
+		bottom: -15%;
+	}
+}
+
+@media only screen and (max-width:360px) {
+
+	.testimonial .title,
+	.testimonial .post {
+		font-size: 16px;
+	}
+
+	.owl-theme .owl-controls {
+		bottom: -12%;
+	}
+}
+
+/* FAQs */
+
+.accordion-button:not(.collapsed),
+.accordion-button:focus {
+	outline: none;
+	border-color: transparent;
+	box-shadow: none;
+	background-color: transparent;
+}
+
+.accordion-button::after {
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	background-color: #8D1CBA;
+	background-image: none !important;
+}
+
+.accordion-button.collapsed::after {
+	background-color: var(--bs-gray-300);
+}
+
+.accordion-item {
+	box-shadow: 0px 1px 40px rgb(0 0 0 / 10%);
+}
+
+.accordion-button {
+	background-color: transparent;
+}
+
+.accordion-button:focus {
+	border-color: none !important;
+	outline: 0 !important;
+}
+
+/*Media Quries */
+
+
+/*Modal */
+
+.modal-dialog.modal-dialog-centered {
+	max-width: 600px;
+}
+
+.modal-content {
+	border: none;
+}
+
+.modal-header {
+	padding: 0 !important;
+	border: none !important;
+	display: flex;
+	justify-content: end;
+}
+
+.close {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 22px;
+	border-bottom-left-radius: 8px;
+	background-color: #8D1CBA;
+	align-items: center;
+	width: 30px;
+	color: white !important;
+	height: 30px;
+}

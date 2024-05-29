@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+
+body {
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    background: #FEFEF7;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+p {
+    margin: 4px 0 !important;
+    color: #5D5D5D;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    /* color: #313B3D !important; */
+}
+
+ol,
+ul {
+    padding-left: 0 !important;
+}
+
+/* Image Slider */
+
+.carousel {
+    position: relative;
+    /* max-width: 700px; */
+}
+
+.splide {
+    margin-top: 50px;
+}
+
+/**
+    Single card
+  */
+.splide .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    color: rgba(0, 0, 0, .9);
+    cursor: pointer;
+    transition: all .1s linear;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card .image {
+    height: 380px;
+    overflow: hidden;
+}
+
+.card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: grayscale(.5); */
+}
+
+.splide__track {
+    padding: 0 !important;
+}
+
+.slider-inside-wrapper {
+    position: absolute;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(28, 206, 107, 0) 0%, #0E6836 100%);
+    padding-top: 100px;
+}
+
+.slider-card-btn {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #141414;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    width: max-content;
+}
+
+.slider-card-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: white;
+    width: 225px;
+    height: 63px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-top: 20px !important;
+}
