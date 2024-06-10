@@ -172,3 +172,13 @@ footer {
     line-height: 18px;
     width: 285px;
 }
+
+@media only screen and (max-width: 991px) {
+    .footer-logos {
+        display: grid;
+    }
+
+    .footer-logos p {
+        width: 100%;
+    }
+}
