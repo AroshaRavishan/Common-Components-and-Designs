@@ -1,0 +1,206 @@
+/* @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+p {
+    margin: 4px 0 !important;
+    color: #5D5D5D;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ol,
+ul {
+    padding-left: 0 !important;
+} */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #007BFF; /* Example primary color */
+    --secondary-color: #6C757D; /* Example secondary color */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Optional: setting a background color */
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+p {
+    margin: 4px 0 !important;
+    color: #5D5D5D;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    color: var(--primary-color);
+}
+
+ol,
+ul {
+    padding-left: 0 !important;
+}
+
+/* Additional styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    margin: 0 0 10px 0;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button.secondary {
+    background-color: var(--secondary-color);
+}
+
+input, textarea {
+    font-family: var(--font-primary);
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive design max width quries */
+
+@media only screen and (max-width: 575px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* min width quries */
+
+@media only screen and (min-width: 575px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 991px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+}
