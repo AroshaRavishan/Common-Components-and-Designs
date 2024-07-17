@@ -19,12 +19,12 @@ const handleMouseLeave = () => {
     document.querySelector('.background-overlay').style.opacity = '0';
     const megaMenu = document.querySelector('.mega-menu');
     if (megaMenu) {
-        // megaMenu.style.opacity = '0';
-        // megaMenu.style.visibility = 'hidden';
-        // megaMenu.style.zIndex = '-900';
-        megaMenu.style.opacity = '1';
-        megaMenu.style.visibility = 'visible';
-        megaMenu.style.zIndex = '900';
+        megaMenu.style.opacity = '0';
+        megaMenu.style.visibility = 'hidden';
+        megaMenu.style.zIndex = '-900';
+        // megaMenu.style.opacity = '1';
+        // megaMenu.style.visibility = 'visible';
+        // megaMenu.style.zIndex = '900';
     }
 };
 
@@ -47,432 +47,275 @@ const activeSubcategory = ref(0) // Initialize with the first subcategory
 
 const categories = ref([
     {
-        name: 'Business Administration',
+        name: 'Category 1',
         image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/administarion.svg' : '../../web-assets/WebRevamp/administarion.svg',
-        description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et elit consectetur adipiscing elit ipsum dolor.',
+        description: 'Description for Category 1',
         subcategories: [
             {
-                name: 'PRINCE2® Project Management',
-                description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et elit consectetur adipiscing elit ipsum dolor.',
+                name: 'Subcategory 1-1',
+                description: 'Description for Subcategory 1-1',
                 courses: [
                     {
-                        name: 'PRINCE2® 7 Practitioner Ultimate Edition',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 1-1-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
                     {
-                        name: 'PRINCE2® 7 Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 1-1-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
                     {
-                        name: 'PRINCE2® 7 Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 1-1-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
                     {
-                        name: 'PRINCE2® 7 Foundation and Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
+                        name: 'Course 1-1-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
+                    },
+                    {
+                        name: 'Course 1-1-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
+                    },
+                    {
+                        name: 'Course 1-1-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
+                    },
+                    {
+                        name: 'Course 1-1-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
+                    },
+                    {
+                        name: 'Course 1-1-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
+                    },
                 ]
             },
             {
-                name: 'PRINCE2 AGILE',
-                description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et elit consectetur adipiscing elit ipsum dolor2.',
+                name: 'Subcategory 1-2',
+                description: 'Description for Subcategory 1-2',
                 courses: [
                     {
-                        name: 'PRINCE2 Agile® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 1-2-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
                     {
-                        name: 'PRINCE2 Agile® Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 1-2-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
-                    {
-                        name: 'PRINCE2 Agile® Foundation and Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
                 ]
             },
             {
-                name: 'APMG International',
-                description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et elit consectetur adipiscing elit ipsum dolor32.',
+                name: 'Subcategory 1-3',
+                description: 'Description for Subcategory 1-3',
                 courses: [
                     {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 1-3-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
                     {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 1-3-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
                 ]
             },
             {
-                name: 'Lean Six Sigma',
-                description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et elit consectetur adipiscing elit ipsum dolor2.',
+                name: 'Subcategory 1-4',
+                description: 'Description for Subcategory 1-4',
                 courses: [
                     {
-                        name: 'PRINCE2 Agile® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 1-4-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
                     {
-                        name: 'PRINCE2 Agile® Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 1-4-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
-                    {
-                        name: 'PRINCE2 Agile® Foundation and Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
                 ]
             },
             {
-                name: 'MSP',
-                description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et elit consectetur adipiscing elit ipsum dolor32.',
+                name: 'Subcategory 1-5',
+                description: 'Description for Subcategory 1-5',
                 courses: [
                     {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 1-5-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
                     {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 1-5-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
                 ]
-            }
+            },
         ]
     },
     {
-        name: 'Finance & Economics',
+        name: 'Category 2',
         image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/Finance.svg' : '../../web-assets/WebRevamp/Finance.svg',
-        description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et elit consectetur adipiscing elit ipsum dolor pacaya.',
+        description: 'Description for Category 2',
         subcategories: [
             {
-                name: 'Financial Management',
-                description: 'Courses focused on financial planning and analysis.',
+                name: 'Subcategory 2-1',
+                description: 'Description for Subcategory 2-1',
                 courses: [
                     {
-                        name: 'Financial Planning and Analysis',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 2-1-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
                     {
-                        name: 'Corporate Finance',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 2-1-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
-                    {
-                        name: 'Investment Management',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
                 ]
             },
-            {
-                name: 'Economics',
-                description: 'Courses covering micro and macroeconomics principles.',
-                courses: [
-                    {
-                        name: 'Microeconomics',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'Macroeconomics',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'International Economics',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
-                ]
-            }
         ]
     },
     {
-        name: 'Heath & Care',
+        name: 'Category 3',
         image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/health.svg' : '../../web-assets/WebRevamp/health.svg',
-        description:'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et elit consectetur adipiscing elit ipsum dolor pacaya.',
-        subcategories: [{
-                name: 'Graphic Design',
+        description: 'Description for Category 3',
+        subcategories: [
+            {
+                name: 'Subcategory 3-1',
+                description: 'Description for Subcategory 3-1',
                 courses: [
                     {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 3-1-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
                     {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 3-1-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
                 ]
             },
-            {
-                name: 'UX/UI Design',
-                courses: [
-                    {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
-                ]
-            }
         ]
     },
     {
-        name: 'Human Resource Development',
+        name: 'Category 4',
         image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/hr.svg' : '../../web-assets/WebRevamp/hr.svg',
-        description:'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et elit consectetur adipiscing elit ipsum dolor pacaya.',
-        subcategories: [{
-                name: 'Graphic Design',
+        description: 'Description for Category 4',
+        subcategories: [
+            {
+                name: 'Subcategory 4-1',
+                description: 'Description for Subcategory 4-1',
                 courses: [
                     {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 4-1-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
                     {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 4-1-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
                 ]
             },
-            {
-                name: 'UX/UI Design',
-                courses: [
-                    {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
-                ]
-            }
         ]
     },
     {
-        name: 'Information & Technology',
+        name: 'Category 5',
         image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/it.svg' : '../../web-assets/WebRevamp/it.svg',
-        description:'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et elit consectetur adipiscing elit ipsum dolor pacaya.',
-        subcategories: [{
-                name: 'Graphic Design',
+        description: 'Description for Category 5',
+        subcategories: [
+            {
+                name: 'Subcategory 5-1',
+                description: 'Description for Subcategory 5-1',
                 courses: [
                     {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 5-1-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
                     {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 5-1-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
                 ]
             },
-            {
-                name: 'UX/UI Design',
-                courses: [
-                    {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
-                ]
-            }
         ]
     },
     {
-        name: 'Project Management',
+        name: 'Category 6',
         image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/projectManagement.svg' : '../../web-assets/WebRevamp/projectManagement.svg',
-        description:'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et elit consectetur adipiscing elit ipsum dolor pacaya.',
-        subcategories: [{
-                name: 'Graphic Design',
+        description: 'Description for Category 6',
+        subcategories: [
+            {
+                name: 'Subcategory 6-1',
+                description: 'Description for Subcategory 6-1',
                 courses: [
                     {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 6-1-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
                     {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 6-1-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
                 ]
             },
-            {
-                name: 'UX/UI Design',
-                courses: [
-                    {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
-                ]
-            }
         ]
     },
     {
-        name: 'Life Learning',
+        name: 'Category 7',
         image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/LifeLearning.svg' : '../../web-assets/WebRevamp/LifeLearning.svg',
-        description:'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et elit consectetur adipiscing elit ipsum dolor pacaya.',
-        subcategories: [{
-                name: 'Graphic Design',
+        description: 'Description for Category 7',
+        subcategories: [
+            {
+                name: 'Subcategory 7-1',
+                description: 'Description for Subcategory 7-1',
                 courses: [
                     {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 7-1-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
                     {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 7-1-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
                 ]
             },
-            {
-                name: 'UX/UI Design',
-                courses: [
-                    {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
-                ]
-            }
         ]
     },
     {
-        name: 'Teaching & Development',
+        name: 'Category 8',
         image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/teaching.svg' : '../../web-assets/WebRevamp/teaching.svg',
-        description:'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et elit consectetur adipiscing elit ipsum dolor pacaya.',
-        subcategories: [{
-                name: 'Graphic Design',
+        description: 'Description for Category 8',
+        subcategories: [
+            {
+                name: 'Subcategory 8-1',
+                description: 'Description for Subcategory 8-1',
                 courses: [
                     {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 8-1-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
                     {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 8-1-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
                 ]
             },
-            {
-                name: 'UX/UI Design',
-                courses: [
-                    {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
-                ]
-            }
         ]
     },
     {
-        name: 'Other Courses',
+        name: 'Category 9',
         image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/other.svg' : '../../web-assets/WebRevamp/other.svg',
-        description:'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et elit consectetur adipiscing elit ipsum dolor pacaya.',
-        subcategories: [{
-                name: 'Graphic Design',
+        description: 'Description for Category 9',
+        subcategories: [
+            {
+                name: 'Subcategory 9-1',
+                description: 'Description for Subcategory 9-1',
                 courses: [
                     {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 9-1-1',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
                     {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
+                        name: 'Course 9-1-2',
+                        image: 'https://staging-gel-bucket.s3.eu-west-2.amazonaws.com/course-card-images/94c20162-0d24-4092-b5f5-5f60fbfa9dc2.png',
                     },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
                 ]
             },
-            {
-                name: 'UX/UI Design',
-                courses: [
-                    {
-                        name: 'Change Management Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'Change Management Practitioner',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    },
-                    {
-                        name: 'AgilePM® Foundation',
-                        image: usePage().props.assetURL ? usePage().props.assetURL + '/web-assets/WebRevamp/awardingbody-image.svg' : '../../web-assets/WebRevamp/awardingbody-image.svg',
-                    }
-                ]
-            }
         ]
     },
-    // Add more main categories here
 ])
-
 
 const setActiveCategory = (index) => {
     activeCategory.value = index
@@ -491,7 +334,12 @@ onMounted(() => {
     }
 })
 
-const activeTab = ref(null);
+const activeTab = ref(0);  // Set to 0 to make the first tab active by default
+const hoverTab = ref(null);
+
+const setActiveTab = (index) => {
+  activeTab.value = index;
+};
 
 </script>
 
@@ -499,7 +347,7 @@ const activeTab = ref(null);
     <nav class="bg-beige-300 py-4 sticky w-full top-0 z-10">
         <div class="container flex items-center justify-between">
             <div class="flex-shrink-0 flex gap-6 xl:gap-14 items-center">
-                <img loading="lazy" :src="$page.props.assetURL ? $page.props.assetURL + '/web-assets/GelLogo.svg' : '../../web-assets/GelLogo.svg'" alt="GelLogo" class="w-[180px]">
+                <img data-v-6f3933da="" loading="lazy" alt="GelLogo" class="w-[180px]" src="https://i.imghippo.com/files/LzYzY1720858499.png">
                 <div class="hidden lg:block">
                     <div class="hoverable">
                         <!-- Mega menu Button -->
@@ -515,64 +363,127 @@ const activeTab = ref(null);
                                     </div>
                                     <div class="static">
                                         <div class="py-0 w-full flex items-center flex-wrap justify-between border-b border-ash-1500">
-                                            <div class="flex items-center gap-2 py-5 px-2.5 inline-flex cursor-pointer transition-all duration-300 rounded-2" :class="{ 'bg-primary-light': activeTab === 0 }" @mouseover="activeTab = 0" @mouseleave="activeTab = null">
+                                            <div class="flex items-center gap-2 py-5 px-2.5 inline-flex cursor-pointer transition-all duration-300 rounded-2 flex-row flex-grow" :class="{ 'bg-beige-300': activeTab === 0 }" @click="setActiveTab = 0" @mouseover="activeTab = 0">
                                                 <div>
                                                     <img loading="lazy" :src="$page.props.assetURL ? $page.props.assetURL + '/web-assets/WebRevamp/awarding.svg' : '../../web-assets/WebRevamp/awarding.svg'" alt="Awarding Bodies" class="max-w-8 max-h-8">
                                                 </div>
-                                                <h6 class="text-lg font-medium" :class="activeTab === 0 ? 'text-ash-900' : 'text-ash-650'">
-                                                    Awarding Bodies
+                                                <h6 class="text-lg font-medium text-ash-650">
+                                                    Main category 01
                                                 </h6>
                                             </div>
-    
-                                            <div class="flex items-center gap-2 py-5 px-2.5 inline-flex cursor-pointer transition-all duration-300 rounded-2" :class="{ 'bg-primary-light': activeTab === 1 }" @mouseover="activeTab = 1" @mouseleave="activeTab = null">
+
+                                            <div class="flex items-center gap-2 py-5 px-2.5 inline-flex cursor-pointer transition-all duration-300 rounded-2 flex-row flex-grow" :class="{ 'bg-beige-300': activeTab === 1 }" @click="setActiveTab = 1" @mouseover="activeTab = 1">
                                                 <div>
                                                     <img loading="lazy" :src="$page.props.assetURL ? $page.props.assetURL + '/web-assets/WebRevamp/certified.svg' : '../../web-assets/WebRevamp/certified.svg'" alt="Get Certified" class="max-w-8 max-h-8">
                                                 </div>
-                                                <h6 class="text-lg font-medium" :class="activeTab === 1 ? 'text-ash-900' : 'text-ash-650'">
-                                                    Get Certified
+                                                <h6 class="text-lg font-medium text-ash-650">
+                                                    Main category 02
                                                 </h6>
                                             </div>
-    
-                                            <div class="flex items-center gap-2 py-5 px-2.5 inline-flex cursor-pointer transition-all duration-300 rounded-2" :class="{ 'bg-primary-light': activeTab === 2 }" @mouseover="activeTab = 2" @mouseleave="activeTab = null">
+
+                                            <div class="flex items-center gap-2 py-5 px-2.5 inline-flex cursor-pointer transition-all duration-300 rounded-2 flex-row flex-grow" :class="{ 'bg-beige-300': activeTab === 2 }" @click="setActiveTab = 2" @mouseover="activeTab = 2">
                                                 <div>
                                                     <img loading="lazy" :src="$page.props.assetURL ? $page.props.assetURL + '/web-assets/WebRevamp/online.svg' : '../../web-assets/WebRevamp/online.svg'" alt="Live Online Courses" class="max-w-8 max-h-8">
                                                 </div>
-                                                <h6 class="text-lg font-medium" :class="activeTab === 2 ? 'text-ash-900' : 'text-ash-650'">
-                                                    Live Online Courses
+                                                <h6 class="text-lg font-medium text-ash-650">
+                                                    Main category 03
                                                 </h6>
                                             </div>
-    
-                                            <div class="flex items-center gap-2 py-5 px-2.5 inline-flex cursor-pointer transition-all duration-300 rounded-2" :class="{ 'bg-primary-light': activeTab === 3 }" @mouseover="activeTab = 3" @mouseleave="activeTab = null">
+
+                                            <div class="flex items-center gap-2 py-5 px-2.5 inline-flex cursor-pointer transition-all duration-300 rounded-2 flex-row flex-grow" :class="{ 'bg-beige-300': activeTab === 3 }" @click="setActiveTab = 3" @mouseover="activeTab = 3">
                                                 <div>
                                                     <img loading="lazy" :src="$page.props.assetURL ? $page.props.assetURL + '/web-assets/WebRevamp/path.svg' : '../../web-assets/WebRevamp/path.svg'" alt="Find Your Career Path" class="max-w-8 max-h-8">
                                                 </div>
-                                                <h6 class="text-lg font-medium" :class="activeTab === 3 ? 'text-ash-900' : 'text-ash-650'">
-                                                    Find Your Career Path
+                                                <h6 class="text-lg font-medium text-ash-650">
+                                                    Main category 04
                                                 </h6>
                                             </div>
-    
-                                            <div class="flex items-center gap-2 py-5 px-2.5 inline-flex cursor-pointer transition-all duration-300 rounded-2" :class="{ 'bg-primary-light': activeTab === 4 }" @mouseover="activeTab = 4" @mouseleave="activeTab = null">
+
+                                            <div class="flex items-center gap-2 py-5 px-2.5 inline-flex cursor-pointer transition-all duration-300 rounded-2 flex-row flex-grow" :class="{ 'bg-beige-300': activeTab === 4 }" @click="setActiveTab = 4" @mouseover="activeTab = 4">
                                                 <div>
                                                     <img loading="lazy" :src="$page.props.assetURL ? $page.props.assetURL + '/web-assets/WebRevamp/resources.svg' : '../../web-assets/WebRevamp/resources.svg'" alt="Free Resources" class="max-w-8 max-h-8">
                                                 </div>
-                                                <h6 class="text-lg font-medium" :class="activeTab === 4 ? 'text-ash-900' : 'text-ash-650'">
-                                                    Free Resources
+                                                <h6 class="text-lg font-medium text-ash-650">
+                                                    Main category 05
                                                 </h6>
                                             </div>
                                         </div>
                                         <div class="">
                                             <!-- Sample data divs -->
-                                            <div v-if="activeTab === 0" class="p-4" @mouseover="activeTab = 0" @mouseleave="activeTab = null">
-                                                <h3 class="text-xl font-bold mb-2">Awarding Bodies</h3>
-                                                <p>Hi! We partner with top institutions such as:</p>
-                                                <ul class="list-disc pl-5 mt-2">
-                                                    <li>International Association of Project Managers (IAPM)</li>
-                                                    <li>Chartered Institute of Marketing (CIM)</li>
-                                                    <li>Association for Project Management (APM)</li>
-                                                </ul>
+                                            <div v-if="activeTab === 0" class="p-4" @mouseover="activeTab = 0">
+                                                <!-- Mega menu Categories -->
+                                                <div class="grid grid-cols-1 lg:grid-cols-12 CategoryPanel">
+                                                    <!-- Left Section -->
+                                                    <div class="col-span-1 lg:col-span-3 border-r border-ash-1500 pr-6">
+                                                        <div class="">
+                                                            <h4 class="text-xl font-semibold text-ash-650 border-b border-ash-1500 py-6">By Topics</h4>
+                                                        </div>
+                                                        <div class="pt-6">
+                                                            <!-- Main Categories Section -->
+                                                            <ul class="space-y-0 h-[373px] 4xl:h-auto overflow-auto">
+                                                                <li v-for="(category, index) in categories" :key="index" class="p-2.5 cursor-pointer transition-colors duration-200 flex gap-2 items-center rounded-2" :class="{ 'bg-ash-850': activeCategory === index, 'hover:bg-gray-100': activeCategory !== index }" @mouseover="setActiveCategory(index)">
+                                                                    <div class="">
+                                                                        <img loading="lazy" :src="category.image" alt="image" class="">
+                                                                    </div>
+                                                                    <h3 class="text-base font-medium text-ash-650">{{ category.name }}</h3>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Right Section -->
+                                                    <div class="col-span-1 lg:col-span-9">
+                                                        <div class="sm:grid sm:grid-cols-2">
+                                                            <!-- Subcategories Section -->
+                                                            <div class="flex flex-col border-r border-ash-1500">
+                                                                <div class="flex flex-col pt-6 px-6">
+                                                                    <h2 class="text-xl font-semibold text-ash-650">{{ categories[activeCategory].name }}</h2>
+                                                                    <p class="mt-5 text-sm font-normal text-ash-1400">{{ categories[activeCategory].description }}</p>
+                                                                    <div class="py-4 border-b border-ash-1500">
+                                                                        <button class="rounded-1 border border-black-500 text-black-500 text-base font-semibold py-2.5 px-12 hover:text-black-500 cursor-pointer">View all</button>
+                                                                    </div>
+                                                                    <div class="pt-5">
+                                                                        <h4 class="text-lg font-semibold text-ash-650">Top Categories</h4>
+                                                                    </div>
+                                                                    <ul class="space-y-3 mt-4 h-[200px] 4xl:h-auto overflow-auto">
+                                                                        <li v-for="(subcategory, index) in categories[activeCategory].subcategories" :key="index" class="cursor-pointer p-2.5 rounded-2 transition-colors duration-200 border border-ash-1500" :class="{ 'bg-beige-300': activeSubcategory === index, 'hover:bg-gray-50': activeSubcategory !== index }" @mouseover="setActiveSubcategory(index)">
+                                                                            <h3 class="text-base font-medium text-ash-650">{{ subcategory.name }}</h3>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Courses Section -->
+                                                            <div class="flex flex-col pt-6 px-6">
+                                                                <h3 class="text-xl font-semibold text-ash-650">
+                                                                    {{ categories[activeCategory].subcategories[activeSubcategory].name }} Courses
+                                                                </h3>
+                                                                <p class="mt-5 text-sm font-normal text-ash-1400">{{ categories[activeCategory].subcategories[activeSubcategory].description }}</p>
+                                                                <div class="py-4 border-b border-ash-1500">
+                                                                    <button class="rounded-1 border border-black-500 text-black-500 text-base font-semibold py-2.5 px-12 hover:text-black-500 cursor-pointer">View all Courses</button>
+                                                                </div>
+                                                                <div class="pt-5">
+                                                                    <h4 class="text-lg font-semibold text-ash-650">Trending Courses</h4>
+                                                                </div>
+                                                                <ul class="sm:grid sm:grid-cols-2 gap-y-6 gap-x-4 mt-7 h-[170px] 4xl:h-auto overflow-auto">
+                                                                    <li v-for="(course, courseIndex) in categories[activeCategory].subcategories[activeSubcategory].courses" :key="courseIndex" class="flex flex-row rounded-2 gap-2 items-center">
+                                                                        <div class="">
+                                                                            <img :src="course.image" alt="Course image" class="max-w-[50px] max-h-[50px] rounded-2 object-contain">
+                                                                        </div>
+                                                                        <h5 class="text-base font-medium text-ash-650 max-h-[3rem] overflow-hidden title-line-clamp cursor-pointer">
+                                                                            {{ course.name }}
+                                                                        </h5>
+                                                                    </li>
+                                                                </ul>
+                                                                <button class="mt-7 text-black-900 text-base font-semibold hover:text-black-500 flex gap-2 items-center border-b border-transparent hover:border-b hover:border-black-900 cursor-pointer transition-all duration-300 ease-in-out w-max">
+                                                                    View all trending courses
+                                                                    <img loading="lazy" :src="$page.props.assetURL ? $page.props.assetURL + '/web-assets/Arrow-Up.svg' : '../../web-assets/Arrow-Up.svg'" alt="Arrow-Up svg" class="">
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-    
-                                            <div v-if="activeTab === 1" class="p-4" @mouseover="activeTab = 1" @mouseleave="activeTab = null">
+
+                                            <div v-if="activeTab === 1" class="p-4" @mouseover="activeTab = 1">
                                                 <h3 class="text-xl font-bold mb-2">Get Certified</h3>
                                                 <p>Hi! Boost your career with our certifications:</p>
                                                 <ul class="list-disc pl-5 mt-2">
@@ -581,8 +492,8 @@ const activeTab = ref(null);
                                                     <li>Certified Information Systems Auditor (CISA)</li>
                                                 </ul>
                                             </div>
-    
-                                            <div v-if="activeTab === 2" class="p-4" @mouseover="activeTab = 2" @mouseleave="activeTab = null">
+
+                                            <div v-if="activeTab === 2" class="p-4" @mouseover="activeTab = 2">
                                                 <h3 class="text-xl font-bold mb-2">Live Online Courses</h3>
                                                 <p>Hi! Join our interactive online sessions:</p>
                                                 <ul class="list-disc pl-5 mt-2">
@@ -591,8 +502,8 @@ const activeTab = ref(null);
                                                     <li>Cybersecurity Essentials</li>
                                                 </ul>
                                             </div>
-    
-                                            <div v-if="activeTab === 3" class="p-4" @mouseover="activeTab = 3" @mouseleave="activeTab = null">
+
+                                            <div v-if="activeTab === 3" class="p-4" @mouseover="activeTab = 3">
                                                 <h3 class="text-xl font-bold mb-2">Find Your Career Path</h3>
                                                 <p>Hi! Explore these promising career paths:</p>
                                                 <ul class="list-disc pl-5 mt-2">
@@ -601,8 +512,8 @@ const activeTab = ref(null);
                                                     <li>Digital Marketing Manager</li>
                                                 </ul>
                                             </div>
-    
-                                            <div v-if="activeTab === 4" class="p-4" @mouseover="activeTab = 4" @mouseleave="activeTab = null">
+
+                                            <div v-if="activeTab === 4" class="p-4" @mouseover="activeTab = 4">
                                                 <h3 class="text-xl font-bold mb-2">Free Resources</h3>
                                                 <p>Hi! Access our free learning materials:</p>
                                                 <ul class="list-disc pl-5 mt-2">
@@ -613,76 +524,7 @@ const activeTab = ref(null);
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Mega menu Categories -->
-                                    <div class="grid grid-cols-1 lg:grid-cols-12 CategoryPanel">
-                                        <!-- Left Section -->
-                                        <div class="col-span-1 lg:col-span-3 border-r border-ash-1500 pr-6">
-                                            <div class="">
-                                                <h4 class="text-xl font-semibold text-ash-650 border-b border-ash-1500 py-6">By Topics</h4>
-                                            </div>
-                                            <div class="pt-6">
-                                                <!-- Main Categories Section -->
-                                                <ul class="space-y-0 h-[373px] 4xl:h-auto overflow-auto">
-                                                    <li v-for="(category, index) in categories" :key="index" class="p-2.5 cursor-pointer transition-colors duration-200 flex gap-2 items-center rounded-2" :class="{ 'bg-ash-850': activeCategory === index, 'hover:bg-gray-100': activeCategory !== index }" @mouseover="setActiveCategory(index)">
-                                                        <div class="">
-                                                            <img loading="lazy" :src="category.image" alt="image" class="">
-                                                        </div>
-                                                        <h3 class="text-base font-medium text-ash-650">{{ category.name }}</h3>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- Right Section -->
-                                        <div class="col-span-1 lg:col-span-9">
-                                            <div class="sm:grid sm:grid-cols-2">
-                                                <!-- Subcategories Section -->
-                                                <div class="flex flex-col border-r border-ash-1500">
-                                                    <div class="flex flex-col pt-6 px-6">
-                                                        <h2 class="text-xl font-semibold text-ash-650">{{ categories[activeCategory].name }}</h2>
-                                                        <p class="mt-5 text-sm font-normal text-ash-1400">{{ categories[activeCategory].description }}</p>
-                                                        <div class="py-4 border-b border-ash-1500">
-                                                            <button class="rounded-1 border border-black-500 text-black-500 text-base font-semibold py-2.5 px-12 hover:text-black-500 cursor-pointer">View all</button>
-                                                        </div>
-                                                        <div class="pt-5">
-                                                            <h4 class="text-lg font-semibold text-ash-650">Top Categories</h4>
-                                                        </div>
-                                                        <ul class="space-y-3 mt-4 h-[200px] 4xl:h-auto overflow-auto">
-                                                            <li v-for="(subcategory, index) in categories[activeCategory].subcategories" :key="index" class="cursor-pointer p-2.5 rounded-2 transition-colors duration-200 border border-ash-1500" :class="{ 'bg-beige-300': activeSubcategory === index, 'hover:bg-gray-50': activeSubcategory !== index }" @mouseover="setActiveSubcategory(index)">
-                                                                <h3 class="text-base font-medium text-ash-650">{{ subcategory.name }}</h3>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <!-- Courses Section -->
-                                                <div class="flex flex-col pt-6 px-6">
-                                                    <h3 class="text-xl font-semibold text-ash-650">
-                                                        {{ categories[activeCategory].subcategories[activeSubcategory].name }} Courses
-                                                    </h3>
-                                                    <!-- <p class="mt-5 text-sm font-normal text-ash-1400">{{ categories[activeCategory].subcategories[activeSubcategory].description }}</p>
-                                                    <div class="py-4 border-b border-ash-1500">
-                                                        <button class="rounded-1 border border-black-500 text-black-500 text-base font-semibold py-2.5 px-12 hover:text-black-500 cursor-pointer">View all Courses</button>
-                                                    </div>
-                                                    <div class="pt-5">
-                                                        <h4 class="text-lg font-semibold text-ash-650">Trending Courses</h4>
-                                                    </div> -->
-                                                    <ul class="sm:grid sm:grid-cols-2 gap-y-6 gap-x-4 mt-7 h-[170px] 4xl:h-auto overflow-auto">
-                                                        <li v-for="(course, courseIndex) in categories[activeCategory].subcategories[activeSubcategory].courses" :key="courseIndex" class="flex flex-row rounded-2">
-                                                            <div class="hidden">
-                                                                <img :src="course.image" alt="Course image" class="max-w-[50px] max-h-[50px]">
-                                                            </div>
-                                                            <h5 class="text-base font-medium text-ash-650 max-h-[3rem] overflow-hidden title-line-clamp cursor-pointer">
-                                                                {{ course.name }}
-                                                            </h5>
-                                                        </li>
-                                                    </ul>
-                                                    <button class="mt-7 text-black-900 text-base font-semibold hover:text-black-500 flex gap-2 items-center border-b border-transparent hover:border-b hover:border-black-900 cursor-pointer transition-all duration-300 ease-in-out w-max">
-                                                        View all trending courses
-                                                        <img loading="lazy" :src="$page.props.assetURL ? $page.props.assetURL + '/web-assets/Arrow-Up.svg' : '../../web-assets/Arrow-Up.svg'" alt="Arrow-Up svg" class="">
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+  
                                 </div>
                             </div>
                             <div class="absolute inset-0 bg-black-500 bg-opacity-75 transition-opacity h-screen background-overlay"></div>
@@ -694,10 +536,10 @@ const activeTab = ref(null);
                 <div class="flex">
                     <ul class="flex space-x-4 items-center">
                         <li>
-                            <router-link to="#Corporate" class="text-black-900 text-base font-bold">Corporate Training</router-link>
+                            <router-link to="#Corporate" class="text-black-900 text-base font-bold">Sample Link 01</router-link>
                         </li>
                         <li>
-                            <router-link to="#Instructor" class="text-black-900 text-base font-bold">Become an Instructor</router-link>
+                            <router-link to="#Instructor" class="text-black-900 text-base font-bold">Sample Link 02</router-link>
                         </li>
                     </ul>
                 </div>
