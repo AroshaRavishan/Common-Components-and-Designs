@@ -19,12 +19,15 @@ const handleMouseLeave = () => {
     document.querySelector('.background-overlay').style.opacity = '0';
     const megaMenu = document.querySelector('.mega-menu');
     if (megaMenu) {
-        megaMenu.style.opacity = '0';
-        megaMenu.style.visibility = 'hidden';
-        megaMenu.style.zIndex = '-900';
-        // megaMenu.style.opacity = '1';
-        // megaMenu.style.visibility = 'visible';
-        // megaMenu.style.zIndex = '900';
+        // megaMenu.style.opacity = '0';
+        // megaMenu.style.visibility = 'hidden';
+        // megaMenu.style.zIndex = '-900';
+
+        // ACTIVE MENU FOR DEVELOP YOU CAN UNCOMMENT BELOW 3 LINES
+        megaMenu.style.opacity = '1';
+        megaMenu.style.visibility = 'visible';
+        megaMenu.style.zIndex = '900';
+        
     }
 };
 
